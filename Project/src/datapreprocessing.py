@@ -20,8 +20,8 @@ def run_preprocessing():
     """
 
     # ─── STEP 1: Configure paths and ratios ────────────────────
-    SRC_DIR = Path('data/raw')
-    DEST_DIR = Path('data/processed')
+    SRC_DIR = Path('D:/Master Programme/Semester Two/Artificial Intelligence within the Healthcare System/Artificial-Intelligence-within-the-Healthcare-System/Project/data/raw')
+    DEST_DIR = Path('D:/Master Programme/Semester Two/Artificial Intelligence within the Healthcare System/Artificial-Intelligence-within-the-Healthcare-System/Project/data/processed')
     CLASSES = ['benign', 'malignant', 'normal']
     TRAIN_RATIO = 0.70
     VAL_RATIO = 0.15
@@ -108,9 +108,9 @@ def run_preprocessing():
         transforms.ToTensor()
     ])
 
-    train_dataset = datasets.ImageFolder('data/processed/train', transform=basic_transform)
-    val_dataset = datasets.ImageFolder('data/processed/val', transform=basic_transform)
-    test_dataset = datasets.ImageFolder('data/processed/test', transform=basic_transform)
+    train_dataset = datasets.ImageFolder('D:/Master Programme/Semester Two/Artificial Intelligence within the Healthcare System/Artificial-Intelligence-within-the-Healthcare-System/Project/data/processed/train', transform=basic_transform)
+    val_dataset = datasets.ImageFolder('D:/Master Programme/Semester Two/Artificial Intelligence within the Healthcare System/Artificial-Intelligence-within-the-Healthcare-System/Project/data/processed/val', transform=basic_transform)
+    test_dataset = datasets.ImageFolder('D:/Master Programme/Semester Two/Artificial Intelligence within the Healthcare System/Artificial-Intelligence-within-the-Healthcare-System/Project/data/processed/test', transform=basic_transform)
 
     print(f"  Train dataset : {len(train_dataset)} images")
     print(f"  Val dataset   : {len(val_dataset)} images")
